@@ -1,0 +1,120 @@
+:root {
+    --headline-color: white;
+    --background-color: #11151c;
+    --text-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  html, body {
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    height: 200vh;
+  }
+
+
+  .top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    /* height: 100vh; */
+    background-color: transparent;
+  }
+
+
+  .canvas-container {
+    /* position: fixed; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+  }
+
+  canvas {
+    position: fixed;
+    z-index: 1;
+  }
+
+  
+  .headline-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+  }
+  
+  #text-behind, #text-front, #text-behind-blur {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: clamp(24px, 20vw, 200px);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 10px;
+    line-height: 0.8;
+  }
+  
+  #text-behind {
+    color: var(--headline-color);
+    z-index: 0;
+  }
+  
+  #text-behind-blur {
+    color: var(--headline-color);
+    filter: blur(7.5px);
+    -webkit-filter: blur(7.5px);
+    z-index: 1;
+  }
+  
+  #text-front {
+    /*  Set text-color to transparent to only show the outline  */
+    color: transparent;
+    /* text-stroke: 2px var(--headline-color); */
+    -webkit-text-stroke: 2px var(--headline-color);
+    z-index: 3;
+  }
+  
+  .bottom {
+    top: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* pointer-events: none; */
+    background-color: transparent;
+    height: 100vh;
+    z-index: 2;
+    width: 100%;
+    /* padding: 10%; */
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.432);
+    padding: 1% 5%;
+    margin: 5%;
+
+  }
+
+  h1 {
+    top:0;
+  }
+
+  .stackList {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+  }
